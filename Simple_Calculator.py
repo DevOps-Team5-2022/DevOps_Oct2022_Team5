@@ -92,6 +92,12 @@ def power(number,exponent):
     return number
 
 #Square Root - Tricia
+def sqRoot(i):
+    if (i < 0):
+        print("Please enter a number >=0)")
+    else:
+        i = math.sqrt(i)
+        print(i)
 
 #Percentage - Elgin
 def percentage():
@@ -150,7 +156,8 @@ while(item):
         print("------------Exponents------------")
         power(int(input("Please enter a number: ")),int(input("Please enter exponent: ")))
     elif (value == 4):
-        print ("Please put in your code Tricia")
+        i = float(input("Please enter the number (>=0) you want to square root: "))
+        sqRoot(i)
     elif (value == 5):
         percentage()
     elif ((value < 1) or (value > 6)):
