@@ -50,7 +50,8 @@ def inverseCosCal():
     result = math.acos(trigoValue)
     print("The answer is: " + str(math.degrees(result)) + " Degrees")
     
-def inverseTanCal():
+def inverseTanCal():
+
     while(true):
         trigoValue = float(input("Please enter a number: "))
         if (trigoValue < -1 or trigoValue > 1):
@@ -70,7 +71,12 @@ def power(number,exponent):
 #Square Root - Tricia
 
 #Percentage - Elgin
-
+def percentage():
+    totalNumber = float(input("Please enter the number you want to get percentage of: "))
+    percentageNumber = float(input("Please enter the % you want: "))
+    decimalNumber = percentageNumber/100
+    result = totalNumber * decimalNumber
+    print (str(result) + "is your number")
 
 #Code to run
 
@@ -109,7 +115,7 @@ while(item):
     elif (value == 4):
         print ("Please put in your code Tricia")
     elif (value == 5):
-        print ("Please put in your code Elgin")
+        percentage()
     elif ((value < 1) or (value > 6)):
         print("Please enter a value between 1-6!")
         print("")
