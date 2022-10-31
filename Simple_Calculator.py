@@ -16,6 +16,29 @@ def menu():
     print("---------------------------------")
 
 #Standard Arithmetic - Jun Jie
+def addCal():
+    num1 = int(input("Please enter a number: "));
+    num2 = int(input("Please enter the second number: "));
+    results = num1 + num2;
+    print("The answer of " + str(num1) + " + " + str(num2) + " is: " + str(results) + "\n");    
+
+def subCal():
+    num1 = int(input("Please enter a number: "));
+    num2 = int(input("Please enter the second number: "));
+    results = num1 - num2;
+    print("The answer of " + str(num1) + " - " + str(num2) + " is: " + str(results) + "\n");    
+
+def multiCal():
+    num1 = int(input("Please enter a number: "));
+    num2 = int(input("Please enter the second number: "));
+    results = num1 * num2;
+    print("The answer of " + str(num1) + " * " + str(num2) + " is: " + str(results) + "\n");    
+
+def diviCal():
+    num1 = int(input("Please enter a number: "));
+    num2 = int(input("Please enter the second number: "));
+    results = num1 / num2;
+    print("The answer of " + str(num1) + " / " + str(num2) + " is: " + str(results) + "\n");    
 
 #Trigonometry - Kevin
 def sinCal():
@@ -50,7 +73,8 @@ def inverseCosCal():
     result = math.acos(trigoValue)
     print("The answer is: " + str(math.degrees(result)) + " Degrees")
     
-def inverseTanCal():
+def inverseTanCal():
+
     while(true):
         trigoValue = float(input("Please enter a number: "))
         if (trigoValue < -1 or trigoValue > 1):
@@ -83,7 +107,19 @@ while(item):
     if (value == 6):
         item  = False
     elif (value == 1):
-        print ("Please put in your code Jun Jie")
+        print("\nPlease choose which Simple Arithmetic function do u want to calculate.");
+        print("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division");
+        arithmeticSelect = input("Please choose a function: ");
+        if(arithmeticSelect == "1"):
+            addCal();
+        elif(arithmeticSelect == "2"):
+            subCal();
+        elif(arithmeticSelect == "3"):
+            multiCal();
+        elif(arithmeticSelect == "4"):
+            diviCal();
+        else:
+            print("PLease choose one of the functions!\n");
     elif (value == 2):
         print("Please choose which Trigometry function do you want to calculate. Values are in degrees")
         print("1. Sin\n2. Cos\n3. Tan\n4. Inverse Sin\n5. Inverse Cos\n6. Inverse Tan")
