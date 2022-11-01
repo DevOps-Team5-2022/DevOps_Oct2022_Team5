@@ -50,7 +50,8 @@ def inverseCosCal():
     result = math.acos(trigoValue)
     print("The answer is: " + str(math.degrees(result)) + " Degrees")
     
-def inverseTanCal():
+def inverseTanCal():
+
     while(true):
         trigoValue = float(input("Please enter a number: "))
         if (trigoValue < -1 or trigoValue > 1):
