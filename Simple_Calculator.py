@@ -16,6 +16,29 @@ def menu():
     print("---------------------------------")
 
 #Standard Arithmetic - Jun Jie
+def addCal():
+    num1 = int(input("Please enter a number: "));
+    num2 = int(input("Please enter the second number: "));
+    results = num1 + num2;
+    print("The answer of " + str(num1) + " + " + str(num2) + " is: " + str(results) + "\n");    
+
+def subCal():
+    num1 = int(input("Please enter a number: "));
+    num2 = int(input("Please enter the second number: "));
+    results = num1 - num2;
+    print("The answer of " + str(num1) + " - " + str(num2) + " is: " + str(results) + "\n");    
+
+def multiCal():
+    num1 = int(input("Please enter a number: "));
+    num2 = int(input("Please enter the second number: "));
+    results = num1 * num2;
+    print("The answer of " + str(num1) + " * " + str(num2) + " is: " + str(results) + "\n");    
+
+def diviCal():
+    num1 = int(input("Please enter a number: "));
+    num2 = int(input("Please enter the second number: "));
+    results = num1 / num2;
+    print("The answer of " + str(num1) + " / " + str(num2) + " is: " + str(results) + "\n");    
 
 #Trigonometry - Kevin
 def sinCal():
@@ -69,8 +92,20 @@ def power(number,exponent):
     return number
 
 #Square Root - Tricia
+def sqRoot(i):
+    if (i < 0):
+        print("Please enter a number >=0)")
+    else:
+        i = math.sqrt(i)
+        print(i)
 
 #Percentage - Elgin
+def percentage():
+    totalNumber = float(input("Please enter the number you want to get percentage of: "))
+    percentageNumber = float(input("Please enter the % you want: "))
+    decimalNumber = percentageNumber/100
+    result = totalNumber * decimalNumber
+    print (str(result) + " is your number")
 
 
 #Code to run
@@ -84,7 +119,19 @@ while(item):
     if (value == 6):
         item  = False
     elif (value == 1):
-        print ("Please put in your code Jun Jie")
+        print("\nPlease choose which Simple Arithmetic function do u want to calculate.");
+        print("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division");
+        arithmeticSelect = input("Please choose a function: ");
+        if(arithmeticSelect == "1"):
+            addCal();
+        elif(arithmeticSelect == "2"):
+            subCal();
+        elif(arithmeticSelect == "3"):
+            multiCal();
+        elif(arithmeticSelect == "4"):
+            diviCal();
+        else:
+            print("PLease choose one of the functions!\n");
     elif (value == 2):
         print("Please choose which Trigometry function do you want to calculate. Values are in degrees")
         print("1. Sin\n2. Cos\n3. Tan\n4. Inverse Sin\n5. Inverse Cos\n6. Inverse Tan")
@@ -110,7 +157,10 @@ while(item):
     elif (value == 4):
         print ("Please put in your code Tricia")
     elif (value == 5):
-        print ("Please put in your code Elgin")
+        i = float(input("Please enter the number (>=0) you want to square root: "))
+        sqRoot(i)
+    elif (value == 5):
+        percentage()
     elif ((value < 1) or (value > 6)):
         print("Please enter a value between 1-6!")
         print("")
